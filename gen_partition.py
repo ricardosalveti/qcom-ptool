@@ -212,7 +212,7 @@ def generate_nand_mbn_gen_xml (disk_params, partition_entry):
 
 def generate_partition_xml (disk_entry, partition_entries_dict, output_xml):
    parse_disk_entry(disk_entry)
-   if disk_params["type"] == "emmc":
+   if disk_params["type"] in ("emmc", "nvme"):
       generate_ptool_xml(disk_params, partition_entries_dict, output_xml)
    elif disk_params["type"] == "nand":
       generate_nand_mbn_gen_xml(disk_params, partition_entries_dict, output_xml)
