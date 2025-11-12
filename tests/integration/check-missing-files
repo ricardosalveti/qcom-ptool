@@ -29,6 +29,8 @@ for xml in "$@"; do
             fi
           ;;
           # known files that will be provided by the OS or boot binaries
+          DISK) ;;
+          XblRamdump.elf) ;;
           abl.elf) ;;
           aop.mbn) ;;
           boot.img) ;;
@@ -36,11 +38,10 @@ for xml in "$@"; do
           cmnlib.mbn) ;;
           cmnlib64.mbn) ;;
           cpucp.elf) ;;
-          devcfg_iot.mbn) ;;
           devcfg.mbn) ;;
-          efi.bin) ;;
-          DISK) ;;
+          devcfg_iot.mbn) ;;
           dtb.bin) ;;
+          efi.bin) ;;
           emmc_appsboot.mbn) ;;
           featenabler.mbn) ;;
           fs_image_linux.tar.gz.mbn.img) ;;
@@ -51,8 +52,8 @@ for xml in "$@"; do
           keymaster64.mbn) ;;
           keymint.mbn) ;;
           km4.mbn) ;;
-          multi_image_qti.mbn) ;;
           multi_image.mbn) ;;
+          multi_image_qti.mbn) ;;
           pmic.elf) ;;
           prog_firehose_ddr.elf) ;;
           prog_firehose_lite.elf) ;;
@@ -71,12 +72,11 @@ for xml in "$@"; do
           storsec.mbn) ;;
           tools.fv) ;;
           tz.mbn) ;;
-          uefi_sec.mbn) ;;
           uefi.elf) ;;
+          uefi_sec.mbn) ;;
+          xbl.elf) ;;
           xbl_config.elf) ;;
           xbl_feature_config.elf) ;;
-          xbl.elf) ;;
-          XblRamdump.elf) ;;
           *)
             echo "Unknown ${file} referenced in ${xml}" >&2
             errors=1
