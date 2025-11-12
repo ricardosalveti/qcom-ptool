@@ -30,6 +30,7 @@ for xml in "$@"; do
           ;;
           # known files that will be provided by the OS or boot binaries
           DISK) ;;
+          NON-HLOS.bin) ;;
           XblRamdump.elf) ;;
           abl.elf) ;;
           aop.mbn) ;;
@@ -52,6 +53,7 @@ for xml in "$@"; do
           keymaster64.mbn) ;;
           keymint.mbn) ;;
           km4.mbn) ;;
+          logfs_ufs_8mb.bin) ;;
           multi_image.mbn) ;;
           multi_image_qti.mbn) ;;
           pmic.elf) ;;
